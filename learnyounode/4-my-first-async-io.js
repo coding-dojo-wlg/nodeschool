@@ -1,0 +1,8 @@
+var fs = require('fs')
+var file = process.argv[2]
+
+fs.readFile(file, 'utf8', function(err, string) {
+  if (!err) {
+    console.log(string.split('\n').length - 1)
+  }
+});
